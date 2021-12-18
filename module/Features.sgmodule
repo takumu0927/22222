@@ -13,4 +13,4 @@ http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell
 http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js,tag=TF下载修正
 
 [MITM]
-hostname = ,vni.kwaiying.com,account.wps.cn,pan.baidu.com,mp.weixin.qq.com,*.snssdk.com,testflight.apple.com,,,
+hostname = ,vni.kwaiying.com,account.wps.cn,pan.baidu.com,mp.weixin.qq.com,*.snssdk.com,testflight.apple.com
