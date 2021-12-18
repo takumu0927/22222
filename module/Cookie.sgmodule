@@ -18,7 +18,7 @@ http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/entry 
 http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js,requires-body=true,tag=美团外卖
 http-request ^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js,tag=wps签到
 http-request ^https?:\/\/.*\/mobile\-user\/(v1\/)?homePage\/.* script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,tag=喜马拉雅
-http-response ^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/dapian.js,tag=Bigshot解锁高级特权
+
 
 [MITM]
 hostname = %APPEND% wapside.189.cn:9001,wx.10086.cn,apk.tw,*.bilibili.com,frodo.douban.com,api.wfdata.club,activity-1.m.duiba.com.cn,i.meituan.com,music.163.com,*.v2ex.com,*.video.qq.com,promotion.waimai.meituan.com,zt.wps.cn,113.96.156.178, *.ximalaya.com
