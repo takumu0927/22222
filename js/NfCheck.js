@@ -21,7 +21,7 @@ const AREA_TEST_FILM_ID = 80018499
 	    result['icon-color'] = '#1B813E'
       //result['icon'] = params.icon1
 	    //result['icon-color'] = params.color1
-      result['content'] = '目前 IP 可完整收看 Netflix 影视剧\n解锁国家：' + code.toUpperCase()
+      result['content'] = '完整支持 Netflix 地区\n解锁地区：' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -33,7 +33,7 @@ const AREA_TEST_FILM_ID = 80018499
 	    result['icon-color'] = "#EFBB24"
       //result['icon'] = params.icon2
 	    //result['icon-color'] = params.color2
-      result['content'] = '目前 IP 仅支持收看 Netflix 自制剧\n解锁国家：' + code.toUpperCase()
+      result['content'] = '仅支持收看自制剧\n解锁地区：' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
