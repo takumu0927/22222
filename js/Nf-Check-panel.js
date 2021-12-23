@@ -4,7 +4,7 @@
  * nf_check = script-name=nf_check, title="Netflix 解锁检测", content="请刷新", update-interval=1
  *
  * [Script]
- * nf_check = type=generic, script-path=https://gist.githubusercontent.com/Hyseen/b06e911a41036ebc36acf04ddebe7b9a/raw/nf_check.js?version=1633074636264, argument=title=Netflix 解锁检测
+ * nf_check = type=generic, script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/js/Nf-Check-panel.js, argument=title=Netflix 解锁检测
  *
  * 支持使用脚本使用 argument 参数自定义配置，如：argument=key1=URLEncode(value1)&key2=URLEncode(value2)，具体参数如下所示，
  * title: 面板标题
