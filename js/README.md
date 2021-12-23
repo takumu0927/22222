@@ -35,7 +35,7 @@
    #流量统计
    TrafficStatistics = script-name=TrafficStatistics, title="流量统计", content="请刷新", update-interval=1
    ```
-## 节假日倒数 [festival.js](https://raw.githubusercontent.com/ventusyu/ventus/main/js/festival.js)
+## 节假日倒数
 ## [festival.js](https://raw.githubusercontent.com/ventusyu/ventus/main/js/festival.js)
    ```bash
    [Script]
