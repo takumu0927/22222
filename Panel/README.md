@@ -2,7 +2,7 @@
 ## [SurgePro](https://raw.githubusercontent.com/ventusyu/ventus/main/js/SurgePro.js)
    ```bash
    [Script]
-   SurgePro_ReloadProfile = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/js/SurgePro.js ,argument=icon=crown.fill&color=#f6c970
+   SurgePro_ReloadProfile = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/panel/SurgePro.js ,argument=icon=crown.fill&color=#f6c970
    [Panel]
    #启动时长
    SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile, title="启动时长", content="请刷新", update-interval=1
