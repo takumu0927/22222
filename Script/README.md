@@ -87,7 +87,6 @@ http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/p
   #!system=ios
 
   [Script]
-
   TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TF.js
 
   [MITM]
