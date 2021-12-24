@@ -8,7 +8,7 @@
    SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile, title="启动时长", content="请刷新", update-interval=1
    ```
 
-## 网络详情（二选一，注意更换`script-path`后路径）
+## 网络详情（二选一）
 ## [Net-info-panel](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/Net-info-panel.js)
 
    ```bash
