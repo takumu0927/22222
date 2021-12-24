@@ -9,7 +9,7 @@
    ```
 
 ## 网络详情（二选一，注意更换`script-path`后路径）
-## [Net-info-panel](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/Net-info-panel.js)[NetInfoPanel.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/NetInfoPanel.js)
+## [Net-info-panel](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/Net-info-panel.js)/n[NetInfoPanel.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/NetInfoPanel.js)
    ```bash
    [Script]
    net-info-panel=type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/Net-info-panel.js
