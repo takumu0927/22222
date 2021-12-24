@@ -1,4 +1,6 @@
 # 自用脚本、重写合集
+## 模块合集[VentusAll.sgmodule](https://raw.githubusercontent.com/ventusyu/ventus/main/Script/VentusAll.sgmodule)
+  
 ## 苹果天气空气质量数据[Apple_Weather.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Script/Apple_Weather.js)  
   ```bash
   #!name= Replace Apple Weather with 🇺🇸US @waqi.info
