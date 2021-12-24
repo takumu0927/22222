@@ -1,0 +1,38 @@
+[Script]
+#空气质量
+http-response ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.* script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/Apple_Weather.js, requires-body=true, tag=Apple_Weather
+
+#微信 去除公众号文章底部广告
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/Wechat.js
+
+#京东、淘宝比价
+# > 京东App 历史价格
+京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/jd_tb_price.js
+# > 淘宝App 历史价格
+淘宝比价 = type=http-request,requires-body=1,pattern=^http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/jd_tb_price.js
+淘宝比价 = type=http-response,requires-body=1,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/jd_tb_price.js
+
+#皮皮虾去水印去广告
+http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/PPX.js
+
+#Bigshot VIP
+http-response ^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/Bigshot.js
+
+#TikTok去水印
+http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TikTok.js, requires-body=true, timeout=10, tag=TK去水印
+
+#TF修正下载
+TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TF.js
+
+
+[URL Rewrite]
+# 空气质量地图
+^https?:\/\/weather-map\.apple\.com\/(v1|v2)\/mapOverlay\/airQuality\?x=(-?\d+)&y=(-?\d+)&z=(-?\d+).*(country=CN)?.* https://tiles.waqi.info/tiles/usepa-aqi/$4/$2/$3.png?&scale=2&country=US&colorFormat=agr header
+#TikTok解锁地区
+(?<=_region=)CN(?=&) JP 307
+(^h.+v5\/)(.+) $1 302
+(?<=&mcc_mnc=)4 2 307
+(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
+
+[MITM]
+hostname = %APPEND% weather-data.apple.com, weather-map.apple.com, tiles.waqi.info, mp.weixin.qq.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, vni.kwaiying.com, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, testflight.apple.com
