@@ -10,13 +10,20 @@
 
 ## 网络详情（二选一，注意更换`script-path`后路径）
 ## [Net-info-panel](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/Net-info-panel.js)
-## [NetInfoPanel.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/NetInfoPanel.js)
+
    ```bash
    [Script]
    net-info-panel=type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/Net-info-panel.js
    [Panel]
    #网络详情
    net-info-panel=title="网络状态",content="请刷新",style=info,script-name=net-info-panel
+   ```
+## [NetInfoPanel.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/NetInfoPanel.js)
+   ```bash
+   [Script]
+   net-info-panel=type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/NetInfoPanel.js
+   [Panel]
+   ️网络详情 = style=info,script-name=net-info-panel,update-interval=1
    ```
 ## 奈飞检测 （二选一，注意更换`script-path`后路径）
 ## [Nf-Check-panel.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/Nf-Check-panel.js)
