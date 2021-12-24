@@ -72,12 +72,12 @@
   ```bash
   [URL Rewrite]
 (?<=_region=)CN(?=&) JP 307
-(^h.+v5\/)(.+) $1 302
 (?<=&mcc_mnc=)4 2 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
 (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
-
   [Script]
-http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TikTok.js, requires-body=true, timeout=10, tag=TK去水印
+  TK去水印 = type=http-response,pattern=https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite),requires-body=1,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TikTok.js
 
   [MITM]
   hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
