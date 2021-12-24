@@ -46,6 +46,14 @@
   ```bash
   [Script]
   http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/PPX.js
+  
   [MITM]
   hostname = *.snssdk.com
   ```
+## Bigshot 解锁高级特权
+  ```bash
+  [Script]
+  http-response ^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/Bigshot.js
+
+  [MITM]
+  hostname = vni.kwaiying.com
