@@ -5,9 +5,9 @@ var obj = JSON.parse($response.body);
  "result": {
   "vipstatus": 1,
   "isexpert": true,
-  "endtime": "2022-11-02",
+  "endtime": "2024-11-02",
   "vipType": 0,
-  "begintime": "2019-11-03",
+  "begintime": "2021-11-03",
   "isRenewals": 1,
   "vipLevel": 0,
   "openCourseIds": [],
