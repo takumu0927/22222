@@ -42,3 +42,10 @@
   [MITM]
   hostname = %INSERT% api.m.jd.com, trade-acs.m.taobao.com
   ```
+## 皮皮虾去广告去水印
+  ```bash
+  [Script]
+  http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/PPX.js
+  [MITM]
+  hostname = *.snssdk.com
+  ```
