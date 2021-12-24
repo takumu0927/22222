@@ -21,3 +21,24 @@
 
   [MITM]
   hostname = %APPEND% weather-map.apple.com, tiles.waqi.info
+  ```
+## 微信 去除公众号文章底部广告[Wechat.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Script/Wechat.js)
+  ```bash
+  [Script]
+  http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/Wechat.js
+
+  [MITM]
+  hostname = mp.weixin.qq.com
+  ```
+## 京东、淘宝比价[jd_tb_price.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Script/jd_tb_price.js)
+  ```bash
+  [Script]
+  # > 京东App 历史价格 by Small
+  京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/jd_tb_price.js
+  # > 淘宝App 历史价格 修改Surge语法 by Small
+  淘宝比价 = type=http-request,requires-body=1,pattern=^http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/jd_tb_price.js
+  淘宝比价 = type=http-response,requires-body=1,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/jd_tb_price.js
+
+  [MITM]
+  hostname = %INSERT% api.m.jd.com, trade-acs.m.taobao.com
+  ```
