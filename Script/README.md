@@ -66,7 +66,7 @@
   [MITM]
   hostname = vipapi.jxedt.com
   ```
-## TikTok
+## TikTok[TikTok.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TikTok.js)
   ```bash
   [URL Rewrite]
 (?<=_region=)CN(?=&) JP 307
@@ -75,7 +75,7 @@
 (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
   [Script]
-http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Tiktok.js, requires-body=true, timeout=10, tag=TK去水印
+http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TikTok.js, requires-body=true, timeout=10, tag=TK去水印
 
   [MITM]
   hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
