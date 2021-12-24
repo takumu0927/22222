@@ -80,7 +80,7 @@ http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/p
   [MITM]
   hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
   ```
-## TF修正下载
+## TF修正下载[TF.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TF.js)
   ```bash
   #!name=TestFlight区域限制解除
   #!desc=该模块适用于更新TestFlight App时, 提示"APP不可用"问题.
