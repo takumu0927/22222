@@ -94,3 +94,14 @@
   [MITM]
   hostname = %APPEND% testflight.apple.com
   ```
+## 百度防跳转[baidu-no-redirect.js](https://raw.githubusercontent.com/ventusyu/ventus/main/Script/baidu-no-redirect.js)
+  ```bash
+  #!name=百度搜索防跳转AppStore
+  #!desc=使用网页版百度搜索,在搜索结果中点击关键词时防跳转AppStore
+  
+  [Script]
+  百度防跳转 = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/baidu-no-redirect.js
+
+  [MITM]
+  hostname = boxer.baidu.com
+  ```
