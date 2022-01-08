@@ -1,6 +1,6 @@
 /*
 [Script]
-groupPanel = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/groupPanel.js,argument=icon=network&color=#86abee&group=Master
+groupPanel = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/groupPanel.js,argument=icon=network&color=#86abee&group=🍉策略组名称
   对应参数：
 	icon：图标
 	color：图标颜色
