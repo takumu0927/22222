@@ -1,12 +1,12 @@
 /*
 [Script]
-groupPanel = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js,argument=icon=network&color=#86abee&group=Master
+groupPanel = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/ventusyu/ventus/main/Panel/groupPanel.js,argument=icon=network&color=#86abee&group=Master
   对应参数：
 	icon：图标
 	color：图标颜色
 	group：策略组名称
 [Panel]
-groupPanel = script-name=groupPanel,update-interval=5
+groupPanel = script-name=🍉groupPanel,update-interval=5
 */
 
 
