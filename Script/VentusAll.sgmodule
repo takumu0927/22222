@@ -24,6 +24,8 @@ http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/p
 #TF修正下载
 TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/TF.js
 
+#百度防跳转
+百度防跳转 = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/ventusyu/ventus/main/Script/baidu-no-redirect.js
 
 [URL Rewrite]
 # 空气质量地图
@@ -35,4 +37,4 @@ TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v
 (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
 [MITM]
-hostname = %APPEND% weather-data.apple.com, weather-map.apple.com, tiles.waqi.info, mp.weixin.qq.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, vni.kwaiying.com, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, testflight.apple.com
+hostname = %APPEND% weather-data.apple.com, weather-map.apple.com, tiles.waqi.info, mp.weixin.qq.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, vni.kwaiying.com, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, testflight.apple.com, boxer.baidu.com
