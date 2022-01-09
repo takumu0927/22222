@@ -7,7 +7,8 @@
   #!desc=切换空气质量数据源为waqi.info，并更改标准为AQI(US)
   
   [Script]
-  http-response ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.* script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Apple_Weather.js, requires-body=true, tag=Apple_Weather
+  # Apple 空气质量数据
+  空气质量 = script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Apple_Weather.js,requires-body=1,tag=Apple_Weather,type=http-response,pattern=^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather.*(?!dataSets=forecastNextHour)(include=.*air_quality.*|dataSets=.*airQuality.*).*(country=[A-Z]{2})?.*,max-size=0,script-update-interval=0
   
   [MITM]
   hostname = %APPEND% weather-data.apple.com
@@ -27,7 +28,7 @@
 ## 微信 去除公众号文章底部广告[Wechat.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Wechat.js)
   ```bash
   [Script]
-  http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Wechat.js
+  公众号去广告 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Wechat.js,type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-update-interval=0
 
   [MITM]
   hostname = mp.weixin.qq.com
@@ -47,7 +48,8 @@
 ## 皮皮虾去广告去水印[PPX.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PPX.js)
   ```bash
   [Script]
-  http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PPX.js
+  # 皮皮虾  Remove Ad & Logo
+  皮皮虾去广告 = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PPX.js,type=http-response,pattern=^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list),script-update-interval=0
   
   [MITM]
   hostname = *.snssdk.com
@@ -55,7 +57,8 @@
 ## Bigshot vip[Bigshot.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Bigshot.js)
   ```bash
   [Script]
-  http-response ^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Bigshot.js
+  # Bigshot解锁高级特权
+  bigshot会员 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Bigshot.js,type=http-response,pattern=^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile,script-update-interval=0
 
   [MITM]
   hostname = vni.kwaiying.com
