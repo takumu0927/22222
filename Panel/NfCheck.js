@@ -21,7 +21,7 @@ const AREA_TEST_FILM_ID = 80018499
 	    result['icon-color'] = '#1B813E'
       //result['icon'] = params.icon1
 	    //result['icon-color'] = params.color1
-      result['content'] = '完整支持 Netflix 地区\n解锁地区：' + code.toUpperCase()
+      result['content'] = '完整支持  Netflix \n解锁地区：' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
