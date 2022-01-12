@@ -135,3 +135,10 @@
   [MITM]
   hostname = ap?.bilibili.com
   ```
+## [JIBJAB vip](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/jibjab.js)
+  ```bash
+  [Script]
+  http-response https:\/\/origin-prod-phoenix\.jibjab\.com\/v1\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/jibjab.js
+  [MITM]
+  hostname = origin-prod-phoenix.jibjab.com
+  ```
