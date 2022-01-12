@@ -2,7 +2,7 @@
 Old_iPA_Downloader by LangKhach
 
 [Script]
-old_ipa = type=http-request,pattern=(https:\/\/.+\-buy\.itunes\.apple\.com\/WebObjects\/MZBuy.woa\/wa\/buyProduct)|(https:\/\/api\.unlimapps\.com\/.+\/apple_apps\/.+\/versions\?=),requires-body=1,max-size=0,debug=1,script-path=https://cdn.jsdelivr.net/gh/langkhach270389/Scripting@master/Surge/old_ipa.js
+old_ipa = type=http-request,pattern=(https:\/\/.+\-buy\.itunes\.apple\.com\/WebObjects\/MZBuy.woa\/wa\/buyProduct)|(https:\/\/api\.unlimapps\.com\/.+\/apple_apps\/.+\/versions\?=),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/OldIPA.js
 
 [MITM]
 hostname = %APPEND% *-buy.itunes.apple.com, api.unlimapps.com
