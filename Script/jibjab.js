@@ -23,5 +23,5 @@ hostname = origin-prod-phoenix.jibjab.com
 
 let obj = JSON.parse($response.body);
 obj.data.attributes["is-paid"] = true;
-obj.data.attributes["email"] = "禁止牟利,TG频道@NobyDa";
+obj.data.attributes["email"] = "天下为公，选贤举能";
 $done({body: JSON.stringify(obj)});
