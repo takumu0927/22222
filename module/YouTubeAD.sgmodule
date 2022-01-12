@@ -1,5 +1,5 @@
-#!name=YouTube
-#!desc=YouTube videos removes ads.
+#!name= Remove YouTube Ads
+#!desc=移除 YouTube 页面广告和视频贴片广告
 
 [Rule]
 URL-REGEX,https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost,REJECT
@@ -18,9 +18,11 @@ URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&oad,REJECT-TINYGIF
 
 [URL Rewrite]
 ctier=[A-Z] citer=A 302
-
-[Script]
-http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/YouTubeAD.js
+(^https?:\/\/(?!redirector)[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)(ctier=L)(&.+) $1$4 header
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+(&oad|ctier) - reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat= - reject
 
 [MITM]
 hostname = %APPEND% *.googlevideo.com, *.youtube.com, youtubei.googleapis.com
