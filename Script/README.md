@@ -142,7 +142,7 @@
   [MITM]
   hostname = origin-prod-phoenix.jibjab.com
   ```
-## [PDF Expert Unlock](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PDFexpert.js)
+## [PDF Expert vip](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PDFexpert.js)
   ```bash
   [Script]
   Documents-PdfExpert = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PDFexpert.js,script-update-interval=-1
