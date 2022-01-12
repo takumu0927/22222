@@ -1,6 +1,6 @@
 /*
 91短视频 解锁部分限制
-http://download.91porn.love/
+https://dsp.aff002.com/sign/teach
 
 ***************************
 QuantumultX:
