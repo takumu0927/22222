@@ -124,3 +124,14 @@
   [MITM]
   hostname = vsco.co, api.revenuecat.com
   ```
+## [哔哩哔哩, 港澳台番剧自动切换地区 & 显示豆瓣评分](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Bili_Auto_Regions.js)
+  ```bash
+  [Script]
+  Bili Region = type=http-response,pattern=^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Bili_Auto_Regions.js
+
+  #可选, 适用于搜索指定地区的番剧
+  Bili Search = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Bili_Auto_Regions.js
+
+  [MITM]
+  hostname = ap?.bilibili.com
+  ```
