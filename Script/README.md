@@ -1,7 +1,7 @@
 # 自用脚本、重写合集
-## 模块合集[VentusAll.sgmodule](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/VentusAll.sgmodule)
+## [模块合集](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/VentusAll.sgmodule)
   
-## 苹果天气空气质量数据[Apple_Weather.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Apple_Weather.js)  
+## [苹果天气空气质量数据](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Apple_Weather.js)  
   ```bash
   #!name= Replace Apple Weather with 🇺🇸US @waqi.info
   #!desc=切换空气质量数据源为waqi.info，并更改标准为AQI(US)
@@ -25,7 +25,7 @@
   [MITM]
   hostname = %APPEND% weather-map.apple.com, tiles.waqi.info
   ```
-## 微信 去除公众号文章底部广告[Wechat.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Wechat.js)
+## [微信 去除公众号文章底部广告](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Wechat.js)
   ```bash
   [Script]
   公众号去广告 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Wechat.js,type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-update-interval=0
@@ -33,7 +33,7 @@
   [MITM]
   hostname = mp.weixin.qq.com
   ```
-## 京东、淘宝比价[jd_tb_price.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/jd_tb_price.js)
+## [京东、淘宝比价](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/jd_tb_price.js)
   ```bash
   [Script]
   # > 京东App 历史价格 by Small
@@ -45,7 +45,7 @@
   [MITM]
   hostname = %INSERT% api.m.jd.com, trade-acs.m.taobao.com
   ```
-## 皮皮虾去广告去水印[PPX.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PPX.js)
+## [皮皮虾去广告去水印](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PPX.js)
   ```bash
   [Script]
   # 皮皮虾  Remove Ad & Logo
@@ -54,7 +54,7 @@
   [MITM]
   hostname = *.snssdk.com
   ```
-## Bigshot vip[Bigshot.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Bigshot.js)
+## [Bigshot vip](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/Bigshot.js)
   ```bash
   [Script]
   # Bigshot解锁高级特权
@@ -63,7 +63,7 @@
   [MITM]
   hostname = vni.kwaiying.com
   ```
-## 驾校一点通 vip[jxydt.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/jxydt.js)
+## [驾校一点通 vip](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/jxydt.js)
   ```bash
   [Script]
   驾校e点通VIP= type=http-response,requires-body=1,pattern=^https:\/\/vipapi\.jxedt\.com\/vip\/check,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/jxydt.js
@@ -71,7 +71,7 @@
   [MITM]
   hostname = vipapi.jxedt.com
   ```
-## TikTok[TikTok.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/TikTok.js)
+## [TikTok](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/TikTok.js)
   ```bash
   [URL Rewrite]
 (?<=_region=)CN(?=&) JP 307
@@ -85,7 +85,7 @@
   [MITM]
   hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
   ```
-## TF修正下载[TF.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/TF.js)
+## [TF修正下载](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/TF.js)
   ```bash
   #!name=TestFlight区域限制解除
   #!desc=该模块适用于更新TestFlight App时, 提示"APP不可用"问题.
@@ -97,7 +97,7 @@
   [MITM]
   hostname = %APPEND% testflight.apple.com
   ```
-## 百度防跳转[baidu-no-redirect.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/baidu-no-redirect.js)
+## [百度防跳转](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/baidu-no-redirect.js)
   ```bash
   #!name=百度搜索防跳转AppStore
   #!desc=使用网页版百度搜索,在搜索结果中点击关键词时防跳转AppStore
@@ -108,11 +108,19 @@
   [MITM]
   hostname = boxer.baidu.com
   ```
-## 91[91.js](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/91.js)
+## [91](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/91.js)
   ```bash
   [Script]
   http-response ^https?:\/\/.+?\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5}|)\/api.php$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/91.js
 
   [General]
   force-http-engine-hosts = *91*:8080, *my10api*:8080
+  ```
+## [VSCO vip](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/vsco.js)
+  ```bash
+  [Script]
+  http-response ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/vsco.js
+  
+  [MITM]
+  hostname = vsco.co, api.revenuecat.com
   ```
