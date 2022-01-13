@@ -45,6 +45,14 @@
   [MITM]
   hostname = %INSERT% api.m.jd.com, trade-acs.m.taobao.com
   ```
+## [微信打开淘宝链接](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/WX-TB.js)
+  ```bash
+  [Script]
+  微信打开淘宝链接 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Script/WX-TB.js
+
+  [MITM] 
+  hostname= weixin110.qq.com
+  ```
 ## [皮皮虾去广告去水印](https://raw.githubusercontent.com/ventusoon/ventus/main/Script/PPX.js)
   ```bash
   [Script]
